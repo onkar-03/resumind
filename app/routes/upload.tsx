@@ -85,8 +85,11 @@ const Upload = () => {
       prepareInstructions({ jobTitle, jobDescription }),
     );
 
-    // Check if the feedback was not received successfully and give error message
-    if (!feedback) return setStatusText('Error: Failed to analyze resume');
+    // Check if the feedback was not received successfully
+    if (!feedback) return;
+
+    // Otherwise if feedback was received successfully display analysis complete
+    setStatusText('Error: Failed to analyze resume');
 
     // If feedback is not a string, parse it
     const feedbackText =
@@ -94,15 +97,10 @@ const Upload = () => {
         ? feedback.message.content
         : feedback.message.content[0].text;
 
-    // Parse the feedback and save it to the database
     data.feedback = JSON.parse(feedbackText);
-
-    // Save the feedback to the database
     await kv.set(`resume:${uuid}`, JSON.stringify(data));
     setStatusText('Analysis complete, redirecting...');
     console.log(data);
-
-    // Redirect to the resume page
     navigate(`/resume/${uuid}`);
   };
 

@@ -650,3 +650,92 @@ export const usePuterStore = create<PuterStore>((set, get) => {
     clearError: () => set({ error: null }), // Clear any error state
   };
 });
+
+/**
+ * ========== FILE SUMMARY: WHAT WAS CREATED AND WHY ==========
+ *
+ * This file creates a complete Zustand store for integrating Puter.js cloud services
+ * into the resume analyzer React application. Here's what each part does:
+ *
+ * 🔧 CORE COMPONENTS CREATED:
+ *
+ * 1. GLOBAL TYPE DECLARATIONS (Lines 68-109)
+ *    └── Extends Window interface with Puter.js API types
+ *    └── Provides TypeScript support for auth, fs, ai, and kv operations
+ *    └── Ensures type safety when calling Puter.js methods
+ *
+ * 2. PUTERSTORE INTERFACE (Lines 119-177)
+ *    └── Defines the complete store structure and methods
+ *    └── Organizes state into logical sections (auth, fs, ai, kv)
+ *    └── Provides type contracts for all store operations
+ *
+ * 3. GETPUTER HELPER FUNCTION (Lines 188-191)
+ *    └── Safely accesses Puter.js SDK with null checks
+ *    └── Prevents SSR errors by checking window object
+ *    └── Single point of access for all Puter operations
+ *
+ * 4. MAIN ZUSTAND STORE (Lines 200-665)
+ *    └── Creates the reactive state management system
+ *    └── Wraps all Puter.js APIs with error handling
+ *    └── Manages loading states and user authentication
+ *
+ * 🎯 KEY FUNCTIONS CREATED:
+ *
+ * • setError() - Centralized error handling across all operations
+ * • checkAuthStatus() - Verifies and updates user authentication state
+ * • signIn() - Handles user login flow with automatic state updates
+ * • signOut() - Manages user logout and state cleanup
+ * • refreshUser() - Updates user data from Puter servers
+ * • init() - Initializes Puter.js with polling and timeout logic
+ *
+ * • File System Operations:
+ *   - write() - Save files to Puter cloud storage
+ *   - readFile() - Read files from cloud storage
+ *   - readDir() - List directory contents
+ *   - upload() - Upload files to cloud storage
+ *   - deleteFile() - Remove files from storage
+ *
+ * • AI Operations:
+ *   - chat() - General AI chat interface
+ *   - feedback() - Custom resume analysis using Claude AI
+ *   - img2txt() - Convert images to text
+ *
+ * • Key-Value Store Operations:
+ *   - getKV() - Retrieve app settings/cached data
+ *   - setKV() - Store app settings/cached data
+ *   - deleteKV() - Remove stored data
+ *   - listKV() - List stored keys/values
+ *   - flushKV() - Clear all stored data
+ *
+ * 🚀 WHAT THIS ENABLES FOR THE RESUME ANALYZER:
+ *
+ * ✅ User Authentication - Persistent login across app
+ * ✅ Resume Upload - Store PDF files in cloud
+ * ✅ AI Analysis - Generate feedback using Claude AI
+ * ✅ Data Persistence - Save analysis results and user preferences
+ * ✅ Error Handling - Consistent error management throughout app
+ * ✅ Loading States - Show progress indicators for all operations
+ * ✅ Type Safety - Full TypeScript support for all cloud operations
+ * ✅ Reactive UI - Components automatically update when state changes
+ *
+ * 📱 HOW COMPONENTS USE THIS STORE:
+ *
+ * Any React component can import and use this store:
+ * ```typescript
+ * import { usePuterStore } from '~/lib/puter';
+ *
+ * function ResumeAnalyzer() {
+ *   const { auth, fs, ai, isLoading, error } = usePuterStore();
+ *
+ *   --- Upload resume and get AI feedback
+ *   const analyzeResume = async (file) => {
+ *     const uploaded = await fs.upload([file]);
+ *     const feedback = await ai.feedback(uploaded.path, "Analyze this resume");
+ *     return feedback;
+ *   };
+ * }
+ * ```
+ *
+ * This architecture provides a clean separation between cloud operations and UI,
+ * making the resume analyzer scalable, maintainable, and type-safe.
+ */

@@ -7,14 +7,8 @@
     <strong>An intelligent resume analysis platform that leverages AI to provide comprehensive feedback, ATS scoring, and optimization suggestions for resumes.</strong>
   </p>
   
-  <p align="center">
-    <a href="https://getresumind.vercel.app/" target="_blank">
-      <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge&logoColor=white" alt="Live Demo" />
-    </a>
-    <a href="https://github.com/onkar-03/resumind" target="_blank">
-      <img src="https://img.shields.io/badge/📂_Repository-View_Code-green?style=for-the-badge&logoColor=white" alt="Repository" />
-    </a>
-  </p>
+  [![Demo](https://img.shields.io/badge/View-Live%20Demo-blue?style=for-the-badge)](https://getresumind.vercel.app/)
+  [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/onkar-03/resumind)
 </div>
 
 ## ✨ Features

@@ -1,15 +1,21 @@
-# Resumind
+# 🧠 Resumind
+
+**AI-Powered Resume Optimization Platform**
 
 <div align="center">
   <img src="/public/docs/images/resumind-hero.png" alt="Resumind - AI Resume Analyzer" />
   
-  <p align="center">
-    <strong>An intelligent resume analysis platform that leverages AI to provide comprehensive feedback, ATS scoring, and optimization suggestions for resumes.</strong>
-  </p>
   
   [![Demo](https://img.shields.io/badge/View-Live%20Demo-blue?style=for-the-badge)](https://getresumind.vercel.app/)
   [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/onkar-03/resumind)
 </div>
+
+---
+
+**Resumind** leverages cutting-edge AI technology to transform your resume into a powerful career tool.
+Get comprehensive feedback, detailed ATS compatibility scoring, and personalized optimization suggestions
+tailored to your target industry. Boost your chances of landing interviews and securing your dream job
+with intelligent resume analysis that goes beyond basic formatting.
 
 ## ✨ Features
 

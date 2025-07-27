@@ -102,6 +102,7 @@ const Upload = () => {
     setStatusText('Analysis complete, redirecting...');
     console.log(data);
 
+    // Redirect to the resume page
     navigate(`/resume/${uuid}`);
   };
 

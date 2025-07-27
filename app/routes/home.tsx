@@ -1,3 +1,4 @@
+import { resumes } from '../../constants';
 import type { Route } from './+types/home';
 import Navbar from '~/components/Navbar';
 
@@ -18,6 +19,11 @@ export default function Home() {
           <h2>Review your submissions and check AI-powered feedback.</h2>
         </div>
       </section>
+      {resumes.map((resume) => (
+        <div key={resume.id}>
+          <h1>{resume.jobTitle}</h1>
+        </div>
+      ))}
     </main>
   );
 }

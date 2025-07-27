@@ -1,87 +1,124 @@
-# Welcome to React Router!
+# � Resumind
 
-A modern, production-ready template for building full-stack React applications using React Router.
+<div align="center">
+  <img src="/public/docs/images/resumind-hero.png" alt="Resumind - AI Resume Analyzer" />
+  
+  <p align="center">
+    <strong>An intelligent resume analysis platform that leverages AI to provide comprehensive feedback, ATS scoring, and optimization suggestions for resumes.</strong>
+  </p>
+  
+  <p align="center">
+    <a href="https://getresumind.vercel.app/" target="_blank">
+      <img src="https://img.shields.io/badge/🌐_Live_Demo-Visit_Site-blue?style=for-the-badge&logoColor=white" alt="Live Demo" />
+    </a>
+    <a href="https://github.com/onkar-03/resumind" target="_blank">
+      <img src="https://img.shields.io/badge/📂_Repository-View_Code-green?style=for-the-badge&logoColor=white" alt="Repository" />
+    </a>
+  </p>
+</div>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## ✨ Features
 
-## Features
+- **AI-Powered Analysis**: Advanced natural language processing to analyze resume content
+- **Comprehensive Scoring**: Multi-dimensional scoring system covering various aspects
+- **Smart Recommendations**: Personalized suggestions for resume improvement
+- **Industry-Specific Insights**: Tailored feedback based on target industry
+- **ATS Compatibility Check**: Ensures resumes are ATS-friendly
+- **Real-time Preview**: Live preview of resume changes and improvements
+- **Export Options**: Download optimized resumes in multiple formats
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🚀 Tech Stack
 
-## Getting Started
+- **Frontend**: React.js, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **AI/ML**: OpenAI GPT API, Natural Language Processing
+- **Database**: MongoDB
+- **Authentication**: JWT
+- **File Processing**: PDF parsing, Document analysis
+- **Deployment**: Docker, AWS/Vercel
 
-### Installation
+## 📋 Prerequisites
 
-Install the dependencies:
+Before running this application, make sure you have:
 
-```bash
-npm install
-```
+- Node.js (v16 or higher)
+- npm or yarn
+- MongoDB database
+- OpenAI API key
 
-### Development
+## ⚙️ Installation
 
-Start the development server with HMR:
+1. **Clone the repository**
 
-```bash
-npm run dev
-```
+   ```bash
+   git clone https://github.com/yourusername/ai-resume-analyzer.git
+   cd ai-resume-analyzer
+   ```
 
-Your application will be available at `http://localhost:5173`.
+2. **Install dependencies**
 
-## Building for Production
+   ```bash
+   # Install backend dependencies
+   npm install
 
-Create a production build:
+   # Install frontend dependencies (if separate)
+   cd client && npm install
+   ```
 
-```bash
-npm run build
-```
+3. **Environment Setup**
 
-## Deployment
+   Create a `.env` file in the root directory:
 
-### Docker Deployment
+   ```env
+   # Database
+   MONGODB_URI=mongodb://localhost:27017/ai-resume-analyzer
 
-To build and run using Docker:
+   # OpenAI
+   OPENAI_API_KEY=your_openai_api_key_here
 
-```bash
-docker build -t my-app .
+   # JWT
+   JWT_SECRET=your_jwt_secret_here
+   JWT_EXPIRES_IN=7d
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+   # Server
+   PORT=5000
+   NODE_ENV=development
 
-The containerized application can be deployed to any platform that supports Docker, including:
+   # Frontend URL (for CORS)
+   CLIENT_URL=http://localhost:3000
+   ```
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+4. **Start the application**
 
-### DIY Deployment
+   ```bash
+   # Development mode
+   npm run dev
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+   # Production mode
+   npm start
+   ```
 
-Make sure to deploy the output of `npm run build`
+## 🖥️ Usage
 
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+1. **Upload Resume**: Upload your resume in PDF or DOCX format
+2. **AI Analysis**: The system analyzes your resume using advanced AI algorithms
+3. **Get Insights**: Receive detailed feedback on:
+   - Content quality and relevance
+   - Formatting and structure
+   - ATS compatibility
+   - Industry-specific recommendations
+4. **Optimize**: Apply suggested improvements
+5. **Download**: Export your optimized resume
 
-## Styling
+### Development Guidelines
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- Follow ESLint and Prettier configurations
+- Write unit tests for new features
+- Update documentation for API changes
+- Use conventional commit messages
 
 ---
 
-Built with ❤️ using React Router.
+⭐ **Star this repository if you find it helpful!**
+
+Made with ❤️ by [Your Name](https://github.com/yourusername)

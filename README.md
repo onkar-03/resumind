@@ -1,4 +1,4 @@
-# � Resumind
+# Resumind
 
 <div align="center">
   <img src="/public/docs/images/resumind-hero.png" alt="Resumind - AI Resume Analyzer" />

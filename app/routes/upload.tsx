@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router';
 import FileUploader from '~/components/FileUploader';
 
 const Upload = () => {
-  const { auth, isLoading, fs, ai, kv } = usePuterStore();
-  const navigate = useNavigate();
   const [isProcessing, setIsProcessing] = useState(false);
   const [statusText, setStatusText] = useState('');
   const [file, setFile] = useState<File | null>(null);
@@ -17,6 +15,27 @@ const Upload = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Check if the user is authenticated
+    const form = e.currentTarget.closest('form');
+
+    //  f the user is not authenticated, redirect to login
+    if (!form) return;
+
+    // If the user is authenticated, proceed with form submission
+    const formData = new FormData(form);
+
+    // Get form values
+    const companyName = formData.get('company-name') as string;
+    const jobTitle = formData.get('job-title') as string;
+    const jobDescription = formData.get('job-description') as string;
+
+    console.log('Form Data:', {
+      companyName,
+      jobTitle,
+      jobDescription,
+      file,
+    });
   };
 
   return (

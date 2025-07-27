@@ -2,6 +2,7 @@ import { type FormEvent, useState } from 'react';
 import Navbar from '~/components/Navbar';
 import { usePuterStore } from '~/lib/puter';
 import { useNavigate } from 'react-router';
+import FileUploader from '~/components/FileUploader';
 
 const Upload = () => {
   const { auth, isLoading, fs, ai, kv } = usePuterStore();
@@ -65,7 +66,7 @@ const Upload = () => {
 
               <div className='form-div'>
                 <label htmlFor='uploader'>Upload Resume</label>
-                <div>Uploader</div>
+                <FileUploader />
               </div>
 
               <button className='primary-button' type='submit'>
